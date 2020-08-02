@@ -1,0 +1,49 @@
+﻿@model Proyecto_Final.Models.DatosOperaciones
+
+@{
+    ViewBag.Title = "Index";
+}
+<br />
+<h1> <strong> <u>Conversor</u></strong></h1>
+<br />
+
+<body>
+    @using (Html.BeginForm(FormMethod.Post))
+    {
+        <div class="form-group">
+            <label for="num1">Inserte un digito:</label>
+            <input type="text" class="form-control" id="num1" name="num1" value="@Model.num1" />
+        </div>
+
+        <div class="form-group">
+            <label for="resultado">Su resultado:</label>
+            <div class=" = " col-md-10">
+                <input type="text" class="form-control" id="resultado" name="valor" value="@Model.resultado" />
+            </div>
+        </div>
+
+        <label for="">Monedas:</label>
+        <button type="submit" class="btn btn-danger" id="dolar" value="dolar" name="valor1">DOP$ - US$</button>
+        <label for="">|</label>
+
+        <button type="submit" class="btn btn-danger" id="peso" value="peso" name="valor1">US$ - DOP$</button>
+        <br />
+        <br />
+
+        <label for="">Temperatura:</label>
+        <button type="submit" class="btn btn-info" id="Celsius" value="celsius" name="valor1">ºF - ºC</button>
+        <label for="">|</label>
+
+        <button type="submit" class="btn btn-info" id="Fahrenheit" value="fahrenheit" name="valor1">ºC - ºF</button>
+        <br />
+        <br />
+
+        <p><a class="btn btn-default" href="https://localhost:44387/Operaciones/Index">&laquo;&laquo; Volver a la Calculadora &raquo;&raquo; </a></p>
+        <br />
+
+        <p><a class="btn btn-default" href="https://localhost:44387/Empleadoses/Create">&laquo;&laquo; Ir al CRUD &raquo;&raquo; </a></p>
+        <p><a class="btn btn-default" href="https://localhost:44387/Nominases/Create">&laquo;&laquo; Ir a Nominas &raquo;&raquo; </a></p>
+
+    }
+
+</body>
